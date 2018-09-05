@@ -294,7 +294,9 @@ nav .navbar-search input[type=text]:not(.browser-default):focus:not([readonly]) 
   color : #F00;
 }
 
-
+textarea.materialize-textarea{
+  height: 6rem;
+}
 
 /****************************************
 *****************************************
