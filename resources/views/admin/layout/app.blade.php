@@ -4,7 +4,7 @@
 @include("admin.layout.nav")
 
 <div class="main-section">
-  <nav class="{{ config('r9')['colors']['primary-name'] }}">
+  <nav class="{{ config('sidebar-menu')['colors']['primary-name'] }}">
     <div class="nav-wrapper flex space-between align-center">
       @section("navbar")
 

@@ -1,7 +1,6 @@
-<div class="input-field">
+<div class="input-field{{ isset($class) ? " $class" : "" }}">
     <select
         @if (isset($name)) name="{{ $name }}" @endif
-        @if (isset($class)) class="{{ $class }}" @endif
     >
         <option value="" disabled selected>Choose your option</option>
         @foreach ($options as $option => $title)

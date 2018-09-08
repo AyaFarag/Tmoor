@@ -1,7 +1,7 @@
 <div class="flex {{ isset($position) ? $position : "justify-end" }}">
     <button
         class="btn waves-effect waves-light {{
-                config("r9")["colors"][(isset($color) ? $color : "primary") . "-name"]
+                config("sidebar-menu")["colors"][(isset($color) ? $color : "primary") . "-name"]
             }}{{
                 isset($class) ? " $class" : ""
             }}"

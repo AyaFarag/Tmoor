@@ -10,7 +10,7 @@
   <style>
     .sidenav .collapsible-body > ul:not(.collapsible) > li.active,
     .sidenav.sidenav-fixed .collapsible-body > ul:not(.collapsible) > li.active {
-      background : {{ config("r9")["colors"]["primary"] }};
+      background : {{ config("sidebar-menu")["colors"]["primary"] }};
     }
   </style>
 

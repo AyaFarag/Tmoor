@@ -4,10 +4,10 @@
   >
     <div class="flex align-center">
       <div style="flex : 1 0 20%">
-        <img class="responsive-img" src="{{ config('r9')['logo']['image'] }}" />
+        <img class="responsive-img" src="{{ config('sidebar-menu')['logo']['image'] }}" />
       </div>
       <div style="flex : 1 0 80%; margin-left : 20px">
-        <strong>{{ config("r9")["logo"]["text"] }}</strong>
+        <strong>{{ config("sidebar-menu")["logo"]["text"] }}</strong>
       </div>
     </div>
   </li>
@@ -21,11 +21,11 @@
   <li>
     <ul class="collapsible">
       <li
-        @if (route(config("r9")["links"]["profile"]) === url() -> current())
+        @if (route(config("sidebar-menu")["links"]["profile"]) === url() -> current())
           class="active"
         @endif
       >
-        <a href="{{ route(config("r9")["links"]["profile"]) }}" class="waves-effect waves-{{ config("r9")["colors"]["primary-name"] }}">
+        <a href="{{ route(config("sidebar-menu")["links"]["profile"]) }}" class="waves-effect waves-{{ config("sidebar-menu")["colors"]["primary-name"] }}">
           <div class="flex space-between align-center">
             <div>{{ auth("admin") -> user() -> name }}</div>
             <i class="material-icons">settings</i>
@@ -33,7 +33,7 @@
         </a>
       </li>
       <li class="divider no-margin"></li>
-      @foreach (config("r9")["items"] as $item)
+      @foreach (config("sidebar-menu")["items"] as $item)
         @if (
           (
             array_key_exists("can", $item)
@@ -44,7 +44,7 @@
         )
           @if (!empty($item["submenu"]))
             <li>
-              <div class="collapsible-header flex space-between align-center waves-effect waves-{{ config("r9")["colors"]["primary-name"] }}">
+              <div class="collapsible-header flex space-between align-center waves-effect waves-{{ config("sidebar-menu")["colors"]["primary-name"] }}">
                 <div class="flex align-center">
                   @if (!empty($item["icon"]))
                     <i class="material-icons">{{ $item["icon"] }}</i>
@@ -61,7 +61,7 @@
                         class="active"
                       @endif
                     >
-                      <a href="{{ route($subItem["route"]) }}" class="waves-effect waves-{{ config("r9")["colors"]["primary-name"] }}">
+                      <a href="{{ route($subItem["route"]) }}" class="waves-effect waves-{{ config("sidebar-menu")["colors"]["primary-name"] }}">
                         @if (!empty($subItem["icon"]))
                           <i class="material-icons">{{ $subItem["icon"] }}</i>
                         @endif
@@ -78,7 +78,7 @@
                 class="active"
               @endif
             >
-              <a href="{{ route($item["route"]) }}" class="waves-effect waves-{{ config("r9")["colors"]["primary-name"] }}">
+              <a href="{{ route($item["route"]) }}" class="waves-effect waves-{{ config("sidebar-menu")["colors"]["primary-name"] }}">
                 @if (!empty($item["icon"]))
                   <i class="material-icons">{{ $item["icon"] }}</i>
                 @endif
@@ -89,7 +89,7 @@
         @endif
       @endforeach
       <li>
-        <a href="{{ route(config("r9")["links"]["logout"]) }}" class="waves-effect waves-{{ config("r9")["colors"]["primary-name"] }}">
+        <a href="{{ route(config("sidebar-menu")["links"]["logout"]) }}" class="waves-effect waves-{{ config("sidebar-menu")["colors"]["primary-name"] }}">
           <i class="material-icons">power_settings_new</i>
           <span>Logout</span>
         </a>
