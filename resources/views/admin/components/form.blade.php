@@ -1,6 +1,7 @@
 <form
     @if (isset($class)) class="{{ $class }}" @endif
     @if (isset($id)) id="{{ $id }}" @endif
+    @if (isset($enctype)) enctype="{{ $enctype }}" @endif
     action="{{ $action }}"
     method="{{
         strtolower($method) === 'get'
