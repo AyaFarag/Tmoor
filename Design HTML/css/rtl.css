@@ -1,0 +1,66 @@
+body {
+}
+
+.text-left {
+    text-align: right !important;
+}
+
+.slideshow .carousel-caption {
+    right: 15%;
+    left: auto !important;
+}
+
+.slideshow .carousel-caption h3 {
+    font-family: "El Messiri" !important;
+}
+
+.slideshow .carousel-caption.secondSlide {
+    left: 0 !important;
+}
+
+.carousel-caption, .careers p, .about, .cmc-project, .contact {
+    direction: rtl;
+}
+
+.cmcImgContainer {
+    padding-right: 5%;
+    padding-left: 5%;
+    border-right: 0;
+    border-left: 2px solid #FFF;
+}
+
+.lead {
+    line-height: 30px !important;
+    font-size: 19px !important;
+}
+
+@media (max-width: 1360px) {
+    .slideshow .carousel-caption p {
+        font-size: 12px !important;
+        margin-left: 14% !important;
+        margin-right: auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .slideshow .carousel-caption.secondSlide {
+        left: 6% !important;
+        right: 15% !important;
+        width: auto !important;
+    }
+
+    .cmcImgContainer {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .cmcImgContainer img {
+        transform: translate(0) !important;
+    }
+}
+
+@media (max-width: 1500px) {
+    .cmcImgContainer img {
+        transform: translateX(19%);
+    }
+}
